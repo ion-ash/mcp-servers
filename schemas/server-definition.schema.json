@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://mcmux.dev/schemas/server-definition.json",
+  "$id": "https://mcpmux.com/schemas/server-definition.json",
   "title": "MCP Server Definition",
-  "description": "Single server definition (Format B) for MCMux Registry",
+  "description": "Single server definition (Format B) for McpMux Registry",
   "type": "object",
   "required": ["id", "name", "transport"],
   "properties": {
@@ -237,7 +237,7 @@
         },
         "verified": {
           "type": "boolean",
-          "description": "Whether publisher is verified by MCMux"
+          "description": "Whether publisher is verified by McpMux"
         },
         "domain_verified": {
           "type": "boolean",
