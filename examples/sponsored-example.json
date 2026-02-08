@@ -1,0 +1,95 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.sponsorco.analytics-server",
+  "name": "SponsorCo Analytics",
+  "alias": "sponsorco",
+  "description": "AI-powered analytics and insights from your business data (Sponsored)",
+  "icon": "📊",
+  "schema_version": "2.1",
+  "categories": ["business", "analytics"],
+  "tags": ["analytics", "insights", "data", "business-intelligence"],
+  
+  "transport": {
+    "type": "http",
+    "url": "https://api.sponsorco.com/mcp/v1",
+    "metadata": {
+      "inputs": [
+        {
+          "id": "API_KEY",
+          "label": "SponsorCo API Key",
+          "description": "Your SponsorCo API key",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "obtain": {
+            "url": "https://sponsorco.com/api-keys",
+            "instructions": "Sign up for a free account and generate an API key in your dashboard",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  
+  "auth": {
+    "type": "api_key",
+    "instructions": "Free tier includes 100 queries/month. Premium plans available for unlimited access."
+  },
+  
+  "publisher": {
+    "name": "SponsorCo Inc.",
+    "domain": "sponsorco.com",
+    "url": "https://sponsorco.com",
+    "verified": true,
+    "domain_verified": true,
+    "official": true
+  },
+  
+  "links": {
+    "homepage": "https://sponsorco.com/mcp",
+    "documentation": "https://docs.sponsorco.com/mcp",
+    "repository": "https://github.com/sponsorco/mcp-server"
+  },
+  
+  "platforms": ["all"],
+  
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": false
+  },
+  
+  "badges": ["verified", "sponsored", "popular"],
+  
+  "hosting_type": "remote",
+  
+  "license": "Commercial",
+  "license_url": "https://sponsorco.com/license",
+  
+  "installation": {
+    "difficulty": "easy",
+    "prerequisites": [],
+    "estimated_time": "3 minutes"
+  },
+  
+  "sponsored": {
+    "enabled": true,
+    "sponsor_name": "SponsorCo Inc.",
+    "sponsor_url": "https://sponsorco.com",
+    "sponsor_logo": "https://sponsorco.com/assets/logo.png",
+    "campaign_id": "mcp-q1-2026"
+  },
+  
+  "media": {
+    "screenshots": [
+      "https://sponsorco.com/assets/screenshots/analytics-1.png",
+      "https://sponsorco.com/assets/screenshots/analytics-2.png",
+      "https://sponsorco.com/assets/screenshots/dashboard.png"
+    ],
+    "demo_video": "https://youtube.com/watch?v=sponsorco-demo",
+    "banner": "https://sponsorco.com/assets/mcp-banner.png"
+  },
+  
+  "changelog_url": "https://sponsorco.com/changelog"
+}

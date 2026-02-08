@@ -1,0 +1,71 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.example.docs-search",
+  "name": "Documentation Search",
+  "alias": "docsearch",
+  "description": "Search and browse technical documentation with AI-powered semantic search (Read-Only)",
+  "icon": "📖",
+  "schema_version": "2.1",
+  "categories": ["documentation", "search"],
+  "tags": ["docs", "documentation", "search", "knowledge-base", "read-only"],
+  
+  "transport": {
+    "type": "http",
+    "url": "https://docs-api.example.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  
+  "auth": {
+    "type": "optional_api_key",
+    "instructions": "Optional API key for increased rate limits. Works without auth with reduced quotas."
+  },
+  
+  "publisher": {
+    "name": "Example Documentation Team",
+    "domain": "example.com",
+    "url": "https://docs.example.com",
+    "verified": true,
+    "domain_verified": true,
+    "official": true
+  },
+  
+  "links": {
+    "homepage": "https://docs.example.com/mcp-server",
+    "documentation": "https://docs.example.com/mcp-server/guide",
+    "repository": "https://github.com/example/docs-search-mcp"
+  },
+  
+  "platforms": ["all"],
+  
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false,
+    "read_only_mode": true
+  },
+  
+  "badges": ["official", "verified"],
+  
+  "hosting_type": "remote",
+  
+  "license": "MIT",
+  "license_url": "https://github.com/example/docs-search-mcp/blob/main/LICENSE",
+  
+  "installation": {
+    "difficulty": "easy",
+    "prerequisites": [],
+    "estimated_time": "1 minute"
+  },
+  
+  "media": {
+    "screenshots": [
+      "https://docs.example.com/assets/search-results.png",
+      "https://docs.example.com/assets/semantic-search.png"
+    ],
+    "banner": "https://docs.example.com/assets/banner.png"
+  },
+  
+  "changelog_url": "https://github.com/example/docs-search-mcp/releases"
+}

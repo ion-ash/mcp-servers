@@ -1,0 +1,77 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.example.remote-hosted",
+  "name": "Remote Hosted Server Example",
+  "alias": "remote",
+  "description": "Example of a remote/cloud-hosted MCP server accessible via HTTP",
+  "icon": "☁️",
+  "schema_version": "2.1",
+  "categories": ["cloud", "api"],
+  "tags": ["remote", "hosted", "http", "cloud"],
+  
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.example.com/v1/endpoint",
+    "metadata": {
+      "inputs": [
+        {
+          "id": "WORKSPACE_ID",
+          "label": "Workspace ID",
+          "description": "Your workspace identifier",
+          "type": "text",
+          "required": true,
+          "secret": false,
+          "placeholder": "ws_abc123"
+        }
+      ]
+    }
+  },
+  
+  "auth": {
+    "type": "oauth",
+    "instructions": "OAuth authentication with your Example account. Click 'Connect' to authorize."
+  },
+  
+  "publisher": {
+    "name": "Example Cloud Services",
+    "domain": "example.com",
+    "url": "https://cloud.example.com",
+    "verified": true,
+    "domain_verified": true,
+    "official": true
+  },
+  
+  "links": {
+    "homepage": "https://cloud.example.com/mcp",
+    "documentation": "https://docs.example.com/mcp/getting-started"
+  },
+  
+  "platforms": ["all"],
+  
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false,
+    "read_only_mode": false
+  },
+  
+  "badges": ["official", "verified"],
+  
+  "hosting_type": "remote",
+  
+  "license": "Apache-2.0",
+  "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+  
+  "installation": {
+    "difficulty": "easy",
+    "prerequisites": [],
+    "estimated_time": "2 minutes"
+  },
+  
+  "media": {
+    "screenshots": [
+      "https://example.com/assets/remote-server-ui.png"
+    ],
+    "banner": "https://example.com/assets/cloud-banner.png"
+  }
+}

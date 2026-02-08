@@ -65,6 +65,60 @@ Your server definition will be validated against our schema. Ensure:
 
 Follow the same process. Update your existing file and submit a PR.
 
+---
+
+## Trademark & Branding Policy
+
+### Icons
+
+- You may reference icon URLs in the `icon` field (emoji or external URL)
+- McpMux does not host icons — they are loaded directly from the URL you provide
+- Do NOT submit URLs to assets you don't have the right to reference
+- Prefer emoji icons or GitHub avatar URLs when possible
+
+### Naming & Descriptions
+
+- Server names may reference third-party products for identification
+  (e.g., "MCP Server for GitHub" is OK)
+- Use language like "works with", "for", or "connects to"
+- Do NOT use "official", "certified", "endorsed", or "licensed"
+  unless you represent the trademark owner and have been verified by McpMux
+
+### Official Status
+
+- All community submissions default to `official: false`
+- To claim `official: true`, you must represent the trademark owner
+  and go through the McpMux verification process
+- False claims of official status will result in submission removal
+
+### Maintainer-Only Fields
+
+The following fields are controlled by McpMux maintainers and must NOT be set
+by contributors:
+
+- `publisher.official` — requires proof of authorization from the trademark holder
+- `publisher.verified` — granted after McpMux review
+- `publisher.domain_verified` — requires DNS verification
+- `badges` containing `"official"` or `"verified"`
+
+PRs that set these fields will be rejected unless submitted by a verified publisher.
+
+---
+
+## Contributor Terms
+
+By submitting a Pull Request to this repository, you agree that:
+
+1. You have the right to reference any URLs included in your submission
+2. You are not claiming official status or endorsement you do not have
+3. You accept responsibility for trademark compliance of your submission
+4. You grant McpMux a license to display the submitted definition, including
+   rendering any referenced icon URLs, on the McpMux discover site and desktop app
+5. You understand McpMux may modify or remove your submission at any time
+   in response to trademark concerns
+
+---
+
 ## Questions?
 
 Open an issue if you need help.

@@ -1,0 +1,14 @@
+[
+  { "id": "developer-tools", "name": "Developer Tools", "icon": "wrench", "display_order": 1 },
+  { "id": "version-control", "name": "Version Control", "icon": "git-branch", "display_order": 2 },
+  { "id": "cloud", "name": "Cloud Services", "icon": "cloud", "display_order": 3 },
+  { "id": "productivity", "name": "Productivity", "icon": "zap", "display_order": 4 },
+  { "id": "database", "name": "Database", "icon": "database", "display_order": 5 },
+  { "id": "search", "name": "Search & Web", "icon": "search", "display_order": 6 },
+  { "id": "communication", "name": "Communication", "icon": "message-circle", "display_order": 7 },
+  { "id": "file-system", "name": "File System", "icon": "folder", "display_order": 8 },
+  { "id": "documentation", "name": "Documentation", "icon": "book-open", "display_order": 9 },
+  { "id": "ai-ml", "name": "AI & Machine Learning", "icon": "brain", "display_order": 10 },
+  { "id": "monitoring", "name": "Monitoring & Observability", "icon": "activity", "display_order": 11 },
+  { "id": "security", "name": "Security", "icon": "shield", "display_order": 12 }
+]

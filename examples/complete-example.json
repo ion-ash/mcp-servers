@@ -1,0 +1,97 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.example.complete-server",
+  "name": "Complete Example Server",
+  "alias": "example",
+  "description": "A fully-featured example demonstrating all available server definition fields",
+  "icon": "🚀",
+  "schema_version": "2.1",
+  "categories": ["developer-tools", "productivity"],
+  "tags": ["example", "demo", "complete", "featured"],
+  
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@example/mcp-server"],
+    "cwd": "~/.mcp-servers/example",
+    "env": {
+      "API_KEY": "${input:API_KEY}",
+      "LOG_LEVEL": "info"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "API_KEY",
+          "label": "API Key",
+          "description": "Your Example service API key for authentication",
+          "type": "password",
+          "required": true,
+          "secret": true,
+          "placeholder": "ex_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "obtain": {
+            "url": "https://example.com/api/keys",
+            "instructions": "1. Log in to your Example account\n2. Navigate to Settings > API Keys\n3. Click 'Create New Key'\n4. Give it a name (e.g., 'McpMux Access')\n5. Copy the generated key",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  
+  "auth": {
+    "type": "api_key",
+    "instructions": "Requires an API key from example.com. Free tier available with 1000 requests/month."
+  },
+  
+  "publisher": {
+    "name": "Example Inc.",
+    "domain": "example.com",
+    "url": "https://example.com",
+    "verified": true,
+    "domain_verified": true,
+    "official": true
+  },
+  
+  "links": {
+    "repository": "https://github.com/example/mcp-server",
+    "homepage": "https://example.com/mcp",
+    "documentation": "https://docs.example.com/mcp-server"
+  },
+  
+  "platforms": ["all"],
+  
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": false
+  },
+  
+  "badges": ["official", "verified", "featured"],
+  
+  "hosting_type": "local",
+  
+  "license": "MIT",
+  "license_url": "https://github.com/example/mcp-server/blob/main/LICENSE",
+  
+  "installation": {
+    "difficulty": "moderate",
+    "prerequisites": [
+      "Node.js 18+",
+      "npm or npx"
+    ],
+    "estimated_time": "5 minutes"
+  },
+  
+  "media": {
+    "screenshots": [
+      "https://example.com/assets/mcp-demo-1.png",
+      "https://example.com/assets/mcp-demo-2.png",
+      "https://example.com/assets/mcp-demo-3.png"
+    ],
+    "demo_video": "https://youtube.com/watch?v=example123",
+    "banner": "https://example.com/assets/mcp-banner.png"
+  },
+  
+  "changelog_url": "https://github.com/example/mcp-server/releases"
+}
