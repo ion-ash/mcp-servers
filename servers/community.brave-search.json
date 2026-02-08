@@ -7,7 +7,7 @@
   "icon": "\ud83d\udd0d",
   "schema_version": "2.1",
   "categories": ["search"],
-  "tags": ["brave", "search", "web-search", "news", "images"],
+  "tags": ["brave", "search", "web-search", "news", "images", "research"],
 
   "transport": {
     "type": "stdio",
@@ -57,7 +57,8 @@
 
   "capabilities": {
     "tools": true,
+    "resources": false,
     "prompts": false,
-    "read_only_mode": false
+    "read_only_mode": true
   }
 }
