@@ -4,6 +4,8 @@ Community-maintained registry of [MCP (Model Context Protocol)](https://modelcon
 
 Each server is defined as a single JSON file. When merged to `main`, definitions are bundled and published to the McpMux discovery API so every McpMux user can install them in one click.
 
+**[Browse servers on mcpmux.com](https://mcpmux.com)** · **[Download McpMux](https://mcpmux.com/download)** · **[Explore features](https://mcpmux.com/features)**
+
 ## Quick Start
 
 ```bash
@@ -63,7 +65,9 @@ contributor submits JSON  ──>  PR validation (CI)  ──>  merge to main
 1. You add a JSON file to `servers/`.
 2. CI validates it against the schema and checks for ID/alias conflicts.
 3. On merge, the bundler aggregates every definition into a single `bundle.json`, enriches it with platform metadata, and uploads it to Cloudflare R2.
-4. McpMux desktop app and the discover web UI read from that bundle.
+4. McpMux desktop app and the [discover web UI](https://mcpmux.com) read from that bundle.
+
+> **Want to browse servers without cloning?** Visit [mcpmux.com](https://mcpmux.com) to search, filter, and one-click install servers directly into the McpMux desktop app.
 
 ---
 
@@ -500,6 +504,17 @@ pnpm build                       # Generate bundle/bundle.json
 
 ---
 
+## McpMux Ecosystem
+
+| Resource | Link |
+|----------|------|
+| **McpMux Desktop App** | [Download](https://mcpmux.com/download) — Windows, macOS, Linux |
+| **Discover Servers** | [mcpmux.com](https://mcpmux.com) — browse, search, and install MCP servers |
+| **Features** | [mcpmux.com/features](https://mcpmux.com/features) — Spaces, Feature Sets, encrypted credentials, and more |
+| **Source Code** | [github.com/MCP-Mux/mcp-mux](https://github.com/MCP-Mux/mcp-mux) |
+
+---
+
 ## License
 
 [MIT](LICENSE)
@@ -511,3 +526,4 @@ pnpm build                       # Generate bundle/bundle.json
 - Open an [issue](https://github.com/nicholasgriffintn/mcp-servers/issues) for help or to request a new category.
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
 - Browse the [examples/](examples/) directory for starter templates.
+- Visit [mcpmux.com](https://mcpmux.com) to learn more about the McpMux platform.
