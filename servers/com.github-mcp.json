@@ -19,13 +19,13 @@
       "ghcr.io/github/github-mcp-server"
     ],
     "env": {
-      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:GITHUB_TOKEN}",
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:GITHUB_PERSONAL_ACCESS_TOKEN}",
       "GITHUB_HOST": "${input:GITHUB_HOST}"
     },
     "metadata": {
       "inputs": [
         {
-          "id": "GITHUB_TOKEN",
+          "id": "GITHUB_PERSONAL_ACCESS_TOKEN",
           "label": "GitHub Personal Access Token",
           "description": "Token used to authenticate with the GitHub API. Requires repo and read:org scopes.",
           "type": "password",
@@ -40,12 +40,13 @@
         },
         {
           "id": "GITHUB_HOST",
-          "label": "GitHub Host (Optional)",
-          "description": "Leave empty for GitHub.com. For GitHub Enterprise Server, use https://YOUR-HOSTNAME. For GitHub Enterprise Cloud with data residency, use https://SUBDOMAIN.ghe.com.",
-          "type": "text",
+          "label": "GitHub Host",
+          "description": "GitHub hostname. Set this for GitHub Enterprise Server or GitHub Enterprise Cloud with data residency. Leave empty for github.com.",
+          "type": "url",
           "required": false,
           "secret": false,
-          "placeholder": "https://github.example.com  or  https://octocorp.ghe.com"
+          "default": "https://api.github.com",
+          "placeholder": "https://github.example.com"
         }
       ]
     }
