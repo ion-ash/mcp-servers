@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.fanvault-mcp",
+  "name": "Fanvault",
+  "alias": "fanvault",
+  "description": "Run creator storefronts, listings, digital products, orders, content, fulfillment, messages, and analytics through AI.",
+  "logo": "https://raw.githubusercontent.com/thefanvault/fanvault-mcp/main/assets/icon-512.png",
+  "schema_version": "2.1",
+  "categories": [
+    "productivity"
+  ],
+  "tags": [
+    "creator-commerce",
+    "ecommerce",
+    "storefront",
+    "listings",
+    "orders",
+    "analytics"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://fanvault.shop/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connect a Fanvault account through OAuth 2.1. Scoped personal access tokens are also supported for clients that accept bearer tokens."
+  },
+  "contributor": {
+    "name": "Fanvault",
+    "github": "thefanvault",
+    "url": "https://fanvault.shop"
+  },
+  "links": {
+    "repository": "https://github.com/thefanvault/fanvault-mcp",
+    "homepage": "https://fanvault.shop",
+    "documentation": "https://fanvault.shop/developers/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
