@@ -30,9 +30,9 @@
         {
           "id": "PUBFI_API_KEY",
           "label": "PubFi API Key",
-          "description": "PubFi API key used to authenticate hosted MCP tool calls.",
+          "description": "Optional for public initialize and tools/list requests; required to authenticate tools/call requests.",
           "type": "text",
-          "required": true,
+          "required": false,
           "secret": true,
           "placeholder": "PUBFI_API_KEY",
           "obtain": {
@@ -45,8 +45,8 @@
     }
   },
   "auth": {
-    "type": "api_key",
-    "instructions": "PubFi MCP requires a PubFi API key sent as an Authorization: Bearer header. Request API access from PubFi if your workspace is not provisioned yet."
+    "type": "optional_api_key",
+    "instructions": "Public initialize and tools/list requests work without a key. Calling a tool requires a PubFi API key sent as an Authorization: Bearer header."
   },
   "contributor": {
     "name": "PubFi",
