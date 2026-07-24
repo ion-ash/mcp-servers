@@ -3,7 +3,7 @@
   "id": "ink.utilia-solana-preflight",
   "name": "Utilia Solana Preflight",
   "alias": "utilia-solana",
-  "description": "Live Solana priority fees, transaction simulation, diagnostics, and token-risk evidence for autonomous agents, paid per call with x402 USDC",
+  "description": "Six paid tools for live Solana priority fees, transaction simulation, diagnostics, token-risk evidence, PDF-to-Markdown, and audio normalization over x402 USDC",
   "schema_version": "2.1",
   "categories": [
     "developer-tools",
@@ -16,7 +16,9 @@
     "priority-fees",
     "simulation",
     "token-risk",
-    "transactions"
+    "transactions",
+    "pdf-to-markdown",
+    "audio-normalization"
   ],
   "transport": {
     "type": "http",
