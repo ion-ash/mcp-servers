@@ -1,0 +1,57 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "app.datamcp-mcp-http",
+  "name": "datamcp",
+  "alias": "datamcp",
+  "description": "Hosted Model Context Protocol gateway for PostgreSQL, MySQL, OpenAPI/Swagger, and shared Agent Memory with scoped access.",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "database",
+    "ai-ml",
+    "productivity",
+    "security"
+  ],
+  "tags": [
+    "datamcp",
+    "hosted-mcp",
+    "mcp-gateway",
+    "postgresql",
+    "mysql",
+    "openapi",
+    "swagger",
+    "agent-memory",
+    "shared-memory",
+    "permissions"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.datamcp.app/api/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Authenticate through the datamcp authorization flow and choose the connection or Agent Memory project you want to expose."
+  },
+  "contributor": {
+    "name": "datamcp",
+    "github": "mironovisa",
+    "url": "https://datamcp.app"
+  },
+  "links": {
+    "repository": "https://github.com/datamcpapp/datamcp-app",
+    "homepage": "https://datamcp.app",
+    "documentation": "https://datamcp.app/docs"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
