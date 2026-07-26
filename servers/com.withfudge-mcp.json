@@ -3,7 +3,7 @@
   "id": "com.withfudge-mcp",
   "name": "Fudge",
   "alias": "fudge",
-  "description": "Fudge is a hosted design-research MCP that gives AI coding agents 1,643+ real websites to study; instead of guessing from screenshots, they can inspect typography, colors, spacing, layout, and motion before building.",
+  "description": "Fudge is a hosted design-research MCP that gives AI coding agents real websites to study; instead of guessing from screenshots, they can inspect typography, colors, spacing, layout, and motion before building.",
   "logo": "https://design.withfudge.com/favicon.svg",
   "schema_version": "2.1",
   "categories": [
