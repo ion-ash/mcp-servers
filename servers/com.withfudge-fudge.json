@@ -1,0 +1,56 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.withfudge-fudge",
+  "name": "Fudge",
+  "alias": "fudge",
+  "description": "Build websites that look designed, not generated. Fudge gives your AI real websites to study, so it can make better design decisions while it builds.",
+  "logo": "https://design.withfudge.com/favicon.svg",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "design",
+    "search"
+  ],
+  "tags": [
+    "design",
+    "web-design",
+    "ui",
+    "ux",
+    "screenshots",
+    "typography",
+    "color",
+    "layout",
+    "frontend",
+    "coding-agents"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.withfudge.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connect via OAuth when prompted and sign in with your Fudge account."
+  },
+  "contributor": {
+    "name": "Fudge",
+    "github": "scroobius-pip",
+    "url": "https://design.withfudge.com"
+  },
+  "links": {
+    "repository": "https://github.com/scroobius-pip/fontofweb",
+    "homepage": "https://design.withfudge.com",
+    "documentation": "https://design.withfudge.com/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
