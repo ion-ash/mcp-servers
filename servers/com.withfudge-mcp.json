@@ -3,7 +3,7 @@
   "id": "com.withfudge-mcp",
   "name": "Fudge",
   "alias": "fudge",
-  "description": "Build websites that look designed, not generated. Fudge gives your AI 1,643+ websites to study, so it can make better design decisions while it builds.",
+  "description": "Fudge is a hosted design-research MCP that gives AI coding agents 1,643+ real websites to study; instead of guessing from screenshots, they can inspect typography, colors, spacing, layout, and motion before building.",
   "logo": "https://design.withfudge.com/favicon.svg",
   "schema_version": "2.1",
   "categories": [
@@ -15,7 +15,9 @@
     "ui",
     "inspiration",
     "website-analysis",
-    "search"
+    "search",
+    "frontend",
+    "typography"
   ],
   "transport": {
     "type": "http",
@@ -26,7 +28,7 @@
   },
   "auth": {
     "type": "oauth",
-    "instructions": "Sign in with your Fudge account. Fudge uses OAuth 2.1 with PKCE."
+    "instructions": "Fudge uses OAuth 2.1 with PKCE (S256). Hosted MCP access is included with Fudge Standard, Pro, and Studio plans."
   },
   "contributor": {
     "name": "Fudge",
