@@ -1,0 +1,52 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.sapph1re-billing-gateway-mcp-http",
+  "name": "MCP Billing Gateway",
+  "alias": "billing-gateway-mcp",
+  "description": "Open-source billing infrastructure for MCP server developers — register services, define pricing plans, track per-tool usage, and validate client access tokens with Stripe-backed subscriptions.",
+  "logo": "https://avatars.githubusercontent.com/u/5317413?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools"
+  ],
+  "tags": [
+    "billing",
+    "payments",
+    "stripe",
+    "monetization",
+    "mcp",
+    "subscriptions",
+    "api-management",
+    "saas"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://mcp-billing-gateway-production.up.railway.app/mcp/",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Requires a Billing Gateway API key. Deploy your own instance from https://github.com/sapph1re/mcp-billing-gateway-sdk, then pass your API key as the Authorization Bearer token."
+  },
+  "contributor": {
+    "name": "sapph1re",
+    "github": "sapph1re",
+    "url": "https://github.com/sapph1re"
+  },
+  "links": {
+    "repository": "https://github.com/sapph1re/mcp-billing-gateway-sdk",
+    "homepage": "https://github.com/sapph1re/mcp-billing-gateway-sdk",
+    "documentation": "https://github.com/sapph1re/mcp-billing-gateway-sdk#readme"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
