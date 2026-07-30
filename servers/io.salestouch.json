@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.salestouch",
+  "name": "SalesTouch",
+  "alias": "salestouch",
+  "description": "Connect AI agents to LinkedIn prospecting workflows for research, qualification, outreach, follow-ups, engagement, and publishing.",
+  "logo": "https://www.salestouch.io/images/icon.png",
+  "schema_version": "2.1",
+  "categories": [
+    "communication",
+    "productivity"
+  ],
+  "tags": [
+    "linkedin",
+    "sales",
+    "prospecting",
+    "lead-generation",
+    "outreach",
+    "automation"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://www.salestouch.io/api/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Connect through the SalesTouch OAuth flow when your MCP client opens the authorization page."
+  },
+  "contributor": {
+    "name": "SalesTouch",
+    "github": "antoineDsh",
+    "url": "https://www.salestouch.io"
+  },
+  "links": {
+    "repository": "https://github.com/antoineDsh/SalesTouch",
+    "homepage": "https://www.salestouch.io",
+    "documentation": "https://www.salestouch.io/getting-started"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
