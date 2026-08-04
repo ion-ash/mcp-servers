@@ -1,0 +1,57 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ch.datenkraft-apple-productivity-mcp-npx",
+  "name": "Apple Productivity MCP (npx)",
+  "alias": "apple-productivity",
+  "description": "Use Apple Mail, Calendar, and Reminders from AI assistants through a free, local macOS MCP server.",
+  "logo": "https://avatars.githubusercontent.com/u/106869358?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "productivity",
+    "communication"
+  ],
+  "tags": [
+    "apple",
+    "macos",
+    "mail",
+    "calendar",
+    "reminders",
+    "local",
+    "stdio"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gambadio/apple-productivity-mcp@latest"
+    ],
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No account, API key, or cloud service is required. Grant the launching MCP client access to Mail, Calendar, and Reminders in macOS Automation settings when prompted."
+  },
+  "contributor": {
+    "name": "Ricardo Kupper",
+    "github": "gambadio",
+    "url": "https://datenkraft.ch"
+  },
+  "links": {
+    "repository": "https://github.com/gambadio/apple-productivity-mcp",
+    "homepage": "https://datenkraft.ch",
+    "documentation": "https://github.com/gambadio/apple-productivity-mcp#readme"
+  },
+  "platforms": [
+    "macos"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  },
+  "changelog_url": "https://github.com/gambadio/apple-productivity-mcp/releases"
+}
