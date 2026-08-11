@@ -1,0 +1,53 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.sapph1re-findata-mcp-http",
+  "name": "FinData MCP",
+  "alias": "findata-mcp",
+  "description": "Real-time and historical financial data — stocks, crypto, forex, options, earnings, and company fundamentals via x402 micropayments ($0.01/call, no subscription required).",
+  "logo": "https://avatars.githubusercontent.com/u/5317413?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "developer-tools"
+  ],
+  "tags": [
+    "finance",
+    "stocks",
+    "crypto",
+    "forex",
+    "options",
+    "market-data",
+    "x402",
+    "micropayments"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://findata-mcp-production-1cd3.up.railway.app/mcp/",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No pre-configuration required. The server uses the x402 payment protocol — your MCP host automatically handles per-request micropayments ($0.01 per call) in USDC on Base. Compatible with any x402-enabled MCP client."
+  },
+  "contributor": {
+    "name": "sapph1re",
+    "github": "sapph1re",
+    "url": "https://github.com/sapph1re"
+  },
+  "links": {
+    "repository": "https://github.com/sapph1re/findata-mcp",
+    "homepage": "https://github.com/sapph1re/findata-mcp",
+    "documentation": "https://github.com/sapph1re/findata-mcp#readme"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
