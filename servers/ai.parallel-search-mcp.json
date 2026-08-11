@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ai.parallel-search-mcp",
+  "name": "Parallel Search",
+  "alias": "parallel",
+  "description": "Search the live web and fetch clean content from URLs through a hosted MCP endpoint that requires no account or API key.",
+  "logo": "https://assets.parallel.ai/dark-parallel-avatar-270.png",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "documentation",
+    "ai-ml"
+  ],
+  "tags": [
+    "parallel",
+    "search",
+    "web-search",
+    "web-fetch",
+    "research",
+    "streamable-http"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://search.parallel.ai/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No account, API key, or OAuth flow is required."
+  },
+  "contributor": {
+    "name": "Parallel",
+    "github": "parallel-web",
+    "url": "https://parallel.ai"
+  },
+  "links": {
+    "homepage": "https://parallel.ai",
+    "documentation": "https://docs.parallel.ai/integrations/mcp/search-mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
