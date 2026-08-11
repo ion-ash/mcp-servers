@@ -1,0 +1,53 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.sapph1re-feedback-synthesis-mcp-http",
+  "name": "Feedback Synthesis MCP",
+  "alias": "feedback-synthesis-mcp",
+  "description": "AI-powered user feedback analysis — synthesizes reviews, support tickets, and survey responses into themes, sentiment scores, and prioritized insights via x402 micropayments.",
+  "logo": "https://avatars.githubusercontent.com/u/5317413?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "tags": [
+    "feedback",
+    "sentiment-analysis",
+    "product",
+    "reviews",
+    "ux-research",
+    "ai",
+    "x402",
+    "micropayments"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://feedback-synthesis-mcp-production.up.railway.app/mcp/",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No pre-configuration required. The server uses the x402 payment protocol — your MCP host automatically handles per-request micropayments in USDC on Base. Compatible with any x402-enabled MCP client."
+  },
+  "contributor": {
+    "name": "sapph1re",
+    "github": "sapph1re",
+    "url": "https://github.com/sapph1re"
+  },
+  "links": {
+    "repository": "https://github.com/sapph1re/feedback-synthesis-mcp",
+    "homepage": "https://github.com/sapph1re/feedback-synthesis-mcp",
+    "documentation": "https://github.com/sapph1re/feedback-synthesis-mcp#readme"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
