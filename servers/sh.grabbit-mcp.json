@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "sh.grabbit-mcp",
+  "name": "Grabbit MCP",
+  "alias": "grabbit",
+  "description": "Find Reddit buyer-intent threads, check subreddit rules, read conversations, and manage lead workflows from any MCP client.",
+  "logo": "https://www.grabbit.sh/favicon.ico",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "productivity",
+    "monitoring"
+  ],
+  "tags": [
+    "reddit",
+    "buyer-intent",
+    "lead-generation",
+    "marketing",
+    "social-media",
+    "analytics"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.grabbit.sh/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth"
+  },
+  "contributor": {
+    "name": "Grabbit",
+    "github": "FrancescoSaverioZuppichini",
+    "url": "https://www.grabbit.sh"
+  },
+  "links": {
+    "homepage": "https://www.grabbit.sh/mcp-server",
+    "documentation": "https://www.grabbit.sh/mcp-server"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "prompts": false,
+    "resources": false,
+    "read_only_mode": false
+  }
+}
