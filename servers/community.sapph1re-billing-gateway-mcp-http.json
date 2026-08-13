@@ -22,13 +22,30 @@
   "transport": {
     "type": "http",
     "url": "https://mcp-billing-gateway-production.up.railway.app/mcp/",
+    "headers": {
+      "Authorization": "Bearer ${input:BILLING_GATEWAY_API_KEY}"
+    },
     "metadata": {
-      "inputs": []
+      "inputs": [
+        {
+          "id": "BILLING_GATEWAY_API_KEY",
+          "type": "text",
+          "label": "Billing Gateway API Key",
+          "description": "API key for your MCP Billing Gateway instance. Deploy your own from https://github.com/sapph1re/mcp-billing-gateway-sdk and generate a key via the /admin/keys endpoint.",
+          "secret": true,
+          "required": true,
+          "obtain": {
+            "url": "https://github.com/sapph1re/mcp-billing-gateway-sdk#readme",
+            "instructions": "1. Deploy MCP Billing Gateway from https://github.com/sapph1re/mcp-billing-gateway-sdk\n2. Set your ADMIN_API_KEY environment variable\n3. POST to /admin/keys to create a client API key\n4. Paste the key here",
+            "button_label": "View setup guide"
+          }
+        }
+      ]
     }
   },
   "auth": {
     "type": "api_key",
-    "instructions": "Requires a Billing Gateway API key. Deploy your own instance from https://github.com/sapph1re/mcp-billing-gateway-sdk, then pass your API key as the Authorization Bearer token."
+    "instructions": "Requires a Billing Gateway API key. Deploy your own instance from https://github.com/sapph1re/mcp-billing-gateway-sdk, then paste your API key above."
   },
   "contributor": {
     "name": "sapph1re",
