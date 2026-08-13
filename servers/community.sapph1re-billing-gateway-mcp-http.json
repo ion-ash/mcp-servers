@@ -1,0 +1,69 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.sapph1re-billing-gateway-mcp-http",
+  "name": "MCP Billing Gateway",
+  "alias": "billing-gateway-mcp",
+  "description": "Open-source billing infrastructure for MCP server developers — register services, define pricing plans, track per-tool usage, and validate client access tokens with Stripe-backed subscriptions.",
+  "logo": "https://avatars.githubusercontent.com/u/5317413?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools"
+  ],
+  "tags": [
+    "billing",
+    "payments",
+    "stripe",
+    "monetization",
+    "mcp",
+    "subscriptions",
+    "api-management",
+    "saas"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://mcp-billing-gateway-production.up.railway.app/mcp/",
+    "headers": {
+      "Authorization": "Bearer ${input:BILLING_GATEWAY_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "BILLING_GATEWAY_API_KEY",
+          "type": "text",
+          "label": "Billing Gateway API Key",
+          "description": "API key for your MCP Billing Gateway instance. Deploy your own from https://github.com/sapph1re/mcp-billing-gateway-sdk and generate a key via the /admin/keys endpoint.",
+          "secret": true,
+          "required": true,
+          "obtain": {
+            "url": "https://github.com/sapph1re/mcp-billing-gateway-sdk#readme",
+            "instructions": "1. Deploy MCP Billing Gateway from https://github.com/sapph1re/mcp-billing-gateway-sdk\n2. Set your ADMIN_API_KEY environment variable\n3. POST to /admin/keys to create a client API key\n4. Paste the key here",
+            "button_label": "View setup guide"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Requires a Billing Gateway API key. Deploy your own instance from https://github.com/sapph1re/mcp-billing-gateway-sdk, then paste your API key above."
+  },
+  "contributor": {
+    "name": "sapph1re",
+    "github": "sapph1re",
+    "url": "https://github.com/sapph1re"
+  },
+  "links": {
+    "repository": "https://github.com/sapph1re/mcp-billing-gateway-sdk",
+    "homepage": "https://github.com/sapph1re/mcp-billing-gateway-sdk",
+    "documentation": "https://github.com/sapph1re/mcp-billing-gateway-sdk#readme"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
