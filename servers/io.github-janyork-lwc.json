@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.github-janyork-lwc",
+  "name": "LWC (Local Wiki CLI)",
+  "alias": "lwc",
+  "description": "Local-first, source-grounded project memory for coding agents with durable Markdown knowledge, provenance, optional knowledge graphs, and bounded read-only MCP retrieval.",
+  "logo": "https://avatars.githubusercontent.com/u/88621545?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "productivity",
+    "documentation",
+    "ai-ml"
+  ],
+  "tags": [
+    "agent-memory",
+    "coding-agents",
+    "knowledge-graph",
+    "local-first",
+    "markdown",
+    "memory",
+    "project-context",
+    "wiki"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@i-xor/lwc",
+      "serve",
+      "--mcp",
+      "--path",
+      "${input:PROJECT_PATH}"
+    ],
+    "metadata": {
+      "inputs": [
+        {
+          "id": "PROJECT_PATH",
+          "label": "Project Path",
+          "description": "Absolute path to the project whose LWC Wiki and optional CodeGraph should be queried.",
+          "type": "directory_path",
+          "required": true,
+          "secret": false,
+          "placeholder": "C:\\Users\\you\\project  or  /home/you/project"
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "none",
+    "instructions": "No authentication or API key is required. LWC runs locally and reads only the selected project's LWC indexes."
+  },
+  "contributor": {
+    "name": "JanYork",
+    "github": "JanYork",
+    "url": "https://github.com/JanYork"
+  },
+  "links": {
+    "repository": "https://github.com/JanYork/llm-wiki-cli",
+    "homepage": "https://github.com/JanYork/llm-wiki-cli",
+    "documentation": "https://github.com/JanYork/llm-wiki-cli#readme"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  },
+  "changelog_url": "https://github.com/JanYork/llm-wiki-cli/releases"
+}
