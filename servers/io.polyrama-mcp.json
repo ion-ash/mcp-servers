@@ -1,0 +1,75 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.polyrama-mcp",
+  "name": "Polyrama",
+  "alias": "polyrama",
+  "description": "Research Polymarket and Kalshi markets, traders, signals, backtests, and paper orders through Polyrama.",
+  "logo": "https://polyrama.io/static/favicon-192.png",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "prediction-markets",
+    "polymarket",
+    "kalshi",
+    "market-data",
+    "trader-analytics",
+    "signals",
+    "backtesting",
+    "paper-trading"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@polyrama/mcp"
+    ],
+    "env": {
+      "POLYRAMA_API_TOKEN": "${input:POLYRAMA_API_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "POLYRAMA_API_TOKEN",
+          "label": "Polyrama access token",
+          "description": "Token used locally by the MCP process to authenticate with Polyrama.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "obtain": {
+            "url": "https://polyrama.io/api",
+            "instructions": "Sign in to Polyrama, open the API page, create a token with the scopes needed for your intended research or paper-trading workflow, and copy it into McpMux.",
+            "button_label": "Open Polyrama"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Use a Polyrama access token from https://polyrama.io/api. McpMux stores the value as a secret."
+  },
+  "contributor": {
+    "name": "Polyrama",
+    "github": "Polyrama",
+    "url": "https://polyrama.io/"
+  },
+  "links": {
+    "repository": "https://github.com/Polyrama/mcp",
+    "homepage": "https://polyrama.io/",
+    "documentation": "https://polyrama.io/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  },
+  "changelog_url": "https://github.com/Polyrama/mcp/releases"
+}
