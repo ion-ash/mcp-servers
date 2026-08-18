@@ -1,0 +1,73 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.unrealugc-mcp",
+  "name": "UnrealUGC MCP",
+  "alias": "unrealugc",
+  "description": "Create and manage AI-generated UGC video ads with UnrealUGC.",
+  "logo": "https://raw.githubusercontent.com/UnrealUGC/mcp/main/assets/unrealugc-icon.png",
+  "schema_version": "2.1",
+  "categories": [
+    "ai-ml",
+    "design"
+  ],
+  "tags": [
+    "unrealugc",
+    "video-generation",
+    "ugc",
+    "advertising",
+    "marketing"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@unrealugc/mcp"
+    ],
+    "env": {
+      "UNREALUGC_API_KEY": "${input:UNREALUGC_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "UNREALUGC_API_KEY",
+          "label": "UnrealUGC API Key",
+          "description": "API key used to authenticate with UnrealUGC.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "placeholder": "usk_live_...",
+          "obtain": {
+            "url": "https://unrealugc.com/dashboard",
+            "instructions": "1. Sign in to UnrealUGC\n2. Open Settings, then API Keys\n3. Create a new API key\n4. Copy the key beginning with usk_live_",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create an API key from Dashboard > Settings > API Keys at https://unrealugc.com."
+  },
+  "contributor": {
+    "name": "UnrealUGC",
+    "github": "UnrealUGC",
+    "url": "https://unrealugc.com"
+  },
+  "links": {
+    "repository": "https://github.com/UnrealUGC/mcp",
+    "homepage": "https://unrealugc.com/mcp",
+    "documentation": "https://unrealugc.com/docs/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  },
+  "changelog_url": "https://github.com/UnrealUGC/mcp/releases"
+}
