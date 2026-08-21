@@ -1,0 +1,68 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.palisade-dmarc-agent",
+  "name": "Palisade DMARC Agent",
+  "alias": "palisade",
+  "description": "Manage DMARC, SPF, DKIM, BIMI, MTA-STS, DNS records, and email-authentication tasks through Palisade.",
+  "logo": "https://github.com/palisadeemail.png",
+  "schema_version": "2.1",
+  "categories": [
+    "security"
+  ],
+  "tags": [
+    "dmarc",
+    "email-security",
+    "spf",
+    "dkim",
+    "bimi",
+    "dns"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.palisade.email/mcp",
+    "headers": {
+      "Authorization": "Bearer ${input:PALISADE_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "PALISADE_API_KEY",
+          "label": "Palisade API Key",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "description": "API key used to authenticate your Palisade account.",
+          "placeholder": "Paste your Palisade API key",
+          "obtain": {
+            "url": "https://app.palisade.email/admin/api-keys",
+            "instructions": "1. Sign in to Palisade\n2. Open API Keys\n3. Create or copy an API key\n4. Paste it here",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a Palisade API key in the Palisade dashboard."
+  },
+  "contributor": {
+    "name": "Palisade",
+    "github": "palisadeemail",
+    "url": "https://www.palisade.email/mcp"
+  },
+  "links": {
+    "repository": "https://github.com/palisadeemail/palisade-mcp",
+    "homepage": "https://www.palisade.email/mcp",
+    "documentation": "https://developer.palisade.email/docs/guide"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
