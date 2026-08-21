@@ -49,11 +49,11 @@
   "contributor": {
     "name": "Palisade",
     "github": "palisadeemail",
-    "url": "https://palisade.email"
+    "url": "https://www.palisade.email/mcp"
   },
   "links": {
     "repository": "https://github.com/palisadeemail/palisade-mcp",
-    "homepage": "https://palisade.email",
+    "homepage": "https://www.palisade.email/mcp",
     "documentation": "https://developer.palisade.email/docs/guide"
   },
   "platforms": [
