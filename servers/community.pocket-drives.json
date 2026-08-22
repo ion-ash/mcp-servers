@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.pocket-drives",
+  "name": "Pocket Drives",
+  "alias": "pocket-drives",
+  "description": "Search peer-to-peer luxury, exotic, and EV rentals from independent hosts.",
+  "logo": "https://avatars.githubusercontent.com/u/65368288?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "pocket-drives",
+    "car-rental",
+    "travel",
+    "luxury",
+    "exotic",
+    "ev",
+    "search"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://pocketdrives.ai/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contributor": {
+    "name": "PocketList Inc",
+    "github": "RevList",
+    "url": "https://pocketdrives.ai"
+  },
+  "links": {
+    "repository": "https://github.com/RevList/pocket-drives-mcp",
+    "homepage": "https://pocketdrives.ai",
+    "documentation": "https://pocketdrives.ai/mcp/tools"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
