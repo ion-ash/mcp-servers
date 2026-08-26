@@ -1,0 +1,50 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "gr.bestprice-mcp",
+  "name": "BestPrice Shopping",
+  "alias": "bestprice",
+  "description": "Search products, compare current merchant offers by delivered cost, and inspect price history on BestPrice.gr for the Greek market.",
+  "logo": "https://www.bestprice.gr/images/logo.svg",
+  "schema_version": "2.1",
+  "categories": [
+    "search"
+  ],
+  "tags": [
+    "bestprice",
+    "shopping",
+    "products",
+    "price-comparison",
+    "price-history",
+    "greece",
+    "remote"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.bestprice.gr/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contributor": {
+    "name": "BestPrice.gr",
+    "github": "TheBestCo",
+    "url": "https://www.bestprice.gr"
+  },
+  "links": {
+    "repository": "https://github.com/TheBestCo/bestprice-mcp",
+    "homepage": "https://www.bestprice.gr/mcp",
+    "documentation": "https://www.bestprice.gr/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
