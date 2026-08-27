@@ -1,0 +1,52 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.merlonix-monitoring",
+  "name": "Merlonix",
+  "alias": "merlonix",
+  "description": "Live website and infrastructure monitoring for AI agents and answer engines: check any public domain SSL/TLS certificate (validity, expiry, issuer), DNS resolution, and registration/RDAP expiry; health-check and A-F security-grade any MCP server via a real JSON-RPC handshake; score a site's AI agent-readiness; check email-sender blacklists; scan for broken links; and read live status for 11 major cloud vendors. 8 public tools need no signup or API key; an optional API key unlocks 8 account tools that manage monitored assets and alerts.",
+  "logo": "https://raw.githubusercontent.com/cmhenry79/merlonix-mcp/main/logo-400.png",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "monitoring"
+  ],
+  "tags": [
+    "monitoring",
+    "ssl",
+    "dns",
+    "uptime",
+    "domain-health",
+    "mcp-health",
+    "agent-readiness",
+    "observability"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.merlonix.com/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "optional_api_key",
+    "instructions": "Optional. The 8 public tools (domain/SSL/DNS health, MCP-server health, agent-readiness, email blacklist, broken-link scan, vendor status) work with no key. Add a Merlonix API key for the 8 account tools that manage monitored assets and alerts."
+  },
+  "contributor": {
+    "name": "Merlonix",
+    "github": "cmhenry79",
+    "url": "https://merlonix.com"
+  },
+  "links": {
+    "homepage": "https://merlonix.com/docs/mcp-server/",
+    "documentation": "https://github.com/cmhenry79/merlonix-mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "prompts": false,
+    "resources": false,
+    "read_only_mode": false
+  }
+}
