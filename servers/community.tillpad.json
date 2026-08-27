@@ -1,0 +1,57 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.tillpad",
+  "name": "Tillpad",
+  "alias": "tillpad",
+  "description": "Bounded storage and search for agent jobs",
+  "logo": "https://avatars.githubusercontent.com/u/7574682?v=4",
+  "schema_version": "2.1",
+  "categories": ["database", "search", "developer-tools"],
+  "tags": ["storage", "search", "agents", "jobs", "memory"],
+  "transport": {
+    "type": "http",
+    "url": "https://tillpad.cnrcode.com/mcp",
+    "headers": {
+      "Authorization": "Bearer ${input:TILLPAD_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "TILLPAD_API_KEY",
+          "label": "Tillpad API Key",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "description": "API key for the hosted Tillpad MCP endpoint.",
+          "placeholder": "tp_...",
+          "obtain": {
+            "url": "https://tillpad.cnrcode.com/docs",
+            "instructions": "1. Sign in at https://tillpad.cnrcode.com\n2. Open the API keys section of your account\n3. Create a new key for McpMux\n4. Copy the key (starts with tp_)",
+            "button_label": "Get API Key"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Requires a Tillpad API key (tp_...) sent as a Bearer token. See https://tillpad.cnrcode.com/docs"
+  },
+  "contributor": {
+    "name": "riderc",
+    "github": "riderc",
+    "url": "https://github.com/riderc"
+  },
+  "links": {
+    "repository": "https://github.com/number1101/tillpad-mcp",
+    "homepage": "https://tillpad.cnrcode.com",
+    "documentation": "https://tillpad.cnrcode.com/docs"
+  },
+  "platforms": ["all"],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
