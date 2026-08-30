@@ -1,0 +1,34 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "com.process-street-mcp",
+  "name": "Process Street",
+  "alias": "process-street",
+  "description": "Connect AI clients to Process Street workflows, workflow runs, tasks, users, data sets, and operational records.",
+  "logo": "https://avatars.githubusercontent.com/u/4595519?s=400&v=4",
+  "schema_version": "2.1",
+  "categories": ["productivity"],
+  "tags": ["process-street", "workflows", "tasks", "workflow-automation", "operations"],
+  "transport": {
+    "type": "http",
+    "url": "https://mcp.process.st/",
+    "metadata": {"inputs": []}
+  },
+  "auth": {"type": "oauth"},
+  "contributor": {
+    "name": "Process Street",
+    "github": "process-street",
+    "url": "https://www.process.st/"
+  },
+  "links": {
+    "repository": "https://github.com/process-street/process-street-mcp",
+    "homepage": "https://www.process.st/",
+    "documentation": "https://www.process.st/help/docs/mcp-server/"
+  },
+  "platforms": ["all"],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
