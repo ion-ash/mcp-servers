@@ -1,0 +1,87 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.github-sandbaseai-sandbase-harness",
+  "name": "SandBase Harness",
+  "alias": "sandbase-harness",
+  "description": "MCP bridge for SandBase Harness sessions, sandboxed turns, artifacts, audit, and replay.",
+  "logo": "https://raw.githubusercontent.com/sandbaseai/sandbase-harness/main/docs/assets/sandbase-harness-icon.png",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "monitoring",
+    "security"
+  ],
+  "tags": [
+    "agent-harness",
+    "agent-runtime",
+    "sandbox",
+    "sessions",
+    "audit",
+    "replay",
+    "artifacts",
+    "docker"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "MANAGED_AGENTS_URL",
+      "-e",
+      "MANAGED_AGENTS_API_KEY",
+      "ghcr.io/sandbaseai/sandbase-harness-mcp:0.3.8"
+    ],
+    "env": {
+      "MANAGED_AGENTS_URL": "${input:MANAGED_AGENTS_URL}",
+      "MANAGED_AGENTS_API_KEY": "${input:MANAGED_AGENTS_API_KEY}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "MANAGED_AGENTS_URL",
+          "label": "SandBase Runtime URL",
+          "description": "Base URL of the running SandBase Harness API. From a container, use host.docker.internal for a host-local runtime.",
+          "type": "url",
+          "required": true,
+          "secret": false,
+          "placeholder": "http://host.docker.internal:3000"
+        },
+        {
+          "id": "MANAGED_AGENTS_API_KEY",
+          "label": "Runtime API Key",
+          "description": "Optional bearer token when the SandBase Harness runtime enables API-key authentication.",
+          "type": "text",
+          "required": false,
+          "secret": true,
+          "placeholder": "sk-local-example"
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "optional_api_key",
+    "instructions": "Set MANAGED_AGENTS_API_KEY when the runtime is configured with bearer-token authentication. Local development can run without it."
+  },
+  "contributor": {
+    "name": "SandBase AI",
+    "github": "sandbaseai",
+    "url": "https://github.com/sandbaseai"
+  },
+  "links": {
+    "repository": "https://github.com/sandbaseai/sandbase-harness",
+    "documentation": "https://github.com/sandbaseai/sandbase-harness/blob/main/llms-install.md"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  },
+  "changelog_url": "https://github.com/sandbaseai/sandbase-harness/releases"
+}
