@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "bio.helena-folklore",
+  "name": "Folklore Clinical Variant Interpretation MCP",
+  "alias": "folklore",
+  "description": "Retrieve public clinical variant evidence, ACMG and AMP evidence, and supporting biomedical literature",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "genomics",
+    "variants",
+    "acmg",
+    "amp",
+    "biomedical"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.helena.bio/folklore/v1/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contributor": {
+    "name": "Helena Bioinformatics",
+    "github": "helena-bioinformatics",
+    "url": "https://www.helena.bio"
+  },
+  "links": {
+    "repository": "https://github.com/helena-bioinformatics/folklore-mcp",
+    "homepage": "https://folklore.helena.bio",
+    "documentation": "https://folklore.helena.bio/docs/folklore-connector"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": true
+  }
+}
