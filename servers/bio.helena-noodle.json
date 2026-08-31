@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "bio.helena-noodle",
+  "name": "Noodle Biomedical Literature Discovery MCP",
+  "alias": "noodle",
+  "description": "Search biomedical literature, inspect publications, and traverse bounded citation and semantic neighborhoods",
+  "schema_version": "2.1",
+  "categories": [
+    "search",
+    "ai-ml"
+  ],
+  "tags": [
+    "biomedical",
+    "literature",
+    "pubmed",
+    "citations",
+    "semantic-search"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.helena.bio/noodle/v1/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contributor": {
+    "name": "Helena Bioinformatics",
+    "github": "helena-bioinformatics",
+    "url": "https://www.helena.bio"
+  },
+  "links": {
+    "repository": "https://github.com/helena-bioinformatics/noodle-mcp",
+    "homepage": "https://noodle.helena.bio",
+    "documentation": "https://noodle.helena.bio/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true,
+    "read_only_mode": true
+  }
+}
