@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.aperturex-wallet-knowledge",
+  "name": "Aperture Wallet Knowledge",
+  "alias": "aperture-wallet-knowledge",
+  "description": "Search verified Aperture Wallet product facts, supported mainnets, security guidance, releases, app-screen semantics, and Journal articles through 12 public read-only tools.",
+  "logo": "https://aperturex.io/assets/app-tile-1024.png",
+  "schema_version": "2.1",
+  "categories": [
+    "documentation",
+    "search",
+    "security"
+  ],
+  "tags": [
+    "aperture-wallet",
+    "crypto-wallet",
+    "self-custody",
+    "bitcoin",
+    "blockchain",
+    "wallet-security"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://aperturex.io/mcp/",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "none"
+  },
+  "contributor": {
+    "name": "Aperture",
+    "github": "devdasx",
+    "url": "https://aperturex.io/"
+  },
+  "links": {
+    "repository": "https://github.com/devdasx/aperture",
+    "homepage": "https://aperturex.io/agents/",
+    "documentation": "https://aperturex.io/llms.txt"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": true
+  }
+}
