@@ -1,0 +1,70 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "io.github-anymfah-stellary-project-management",
+  "name": "Stellary",
+  "alias": "stellary",
+  "description": "Connect AI assistants to Stellary projects, boards, documents, and governed agent workflows.",
+  "logo": "https://stellary.co/logo.svg",
+  "schema_version": "2.1",
+  "categories": [
+    "productivity",
+    "developer-tools"
+  ],
+  "tags": [
+    "stellary",
+    "project-management",
+    "boards",
+    "tasks",
+    "agents",
+    "productivity",
+    "remote"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://api.stellary.co/mcp",
+    "headers": {
+      "Authorization": "Bearer ${input:STELLARY_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "STELLARY_TOKEN",
+          "label": "Stellary Personal Access Token",
+          "description": "PAT sent as a Bearer token to the hosted Streamable HTTP MCP endpoint. Required for any useful call.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "placeholder": "YOUR_STELLARY_TOKEN",
+          "obtain": {
+            "url": "https://app.stellary.co",
+            "instructions": "1. Sign in at app.stellary.co\n2. Open Account settings → API tokens from the user menu\n3. Create a personal access token (start with projects:read and pilotage:read; add write scopes only if needed)\n4. Copy the plaintext secret shown once at creation",
+            "button_label": "Create Token"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a Stellary personal access token in Account settings → API tokens and send it as an Authorization: Bearer header. This listing uses Bearer PAT, not OAuth."
+  },
+  "contributor": {
+    "name": "Soheil Saheb-Jamii",
+    "github": "Anymfah",
+    "url": "https://stellary.co"
+  },
+  "links": {
+    "repository": "https://github.com/Anymfah/stellary-mcp",
+    "homepage": "https://stellary.co",
+    "documentation": "https://stellary.co/docs/mcp/"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
