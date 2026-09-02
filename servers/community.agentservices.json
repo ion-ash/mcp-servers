@@ -1,0 +1,54 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "community.agentservices",
+  "name": "AgentServices",
+  "alias": "agentservices",
+  "description": "52 paid x402 API endpoints for AI agents \u2014 crypto, data, DeFi, and market intelligence.",
+  "logo": "https://avatars.githubusercontent.com/u/86377299?v=4",
+  "schema_version": "2.1",
+  "categories": [
+    "developer-tools",
+    "search",
+    "security"
+  ],
+  "tags": [
+    "x402",
+    "usdc",
+    "base",
+    "crypto",
+    "defi",
+    "market-data",
+    "mcp",
+    "oauth"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://agentservices.to/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Human MCP clients sign in with Google OAuth at https://agentservices.to/mcp (Stripe prepaid credits). Wallet agents pay per-request via x402 USDC on Base for REST. No API key is required to connect."
+  },
+  "contributor": {
+    "name": "Vivek Kotecha",
+    "github": "vbkotecha",
+    "url": "https://agentservices.to"
+  },
+  "links": {
+    "repository": "https://github.com/vbkotecha/agentservices-api",
+    "homepage": "https://agentservices.to",
+    "documentation": "https://agentservices.to/llms.txt"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
