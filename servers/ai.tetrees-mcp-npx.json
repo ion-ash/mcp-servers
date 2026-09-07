@@ -1,0 +1,73 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ai.tetrees-mcp-npx",
+  "name": "Tetrees AI",
+  "alias": "tetrees",
+  "description": "Discover, run, grow and trade portable TAIP/1 agent intelligence through Tetrees MCP.",
+  "logo": "https://ex.tetrees.ai/logo.png",
+  "schema_version": "2.1",
+  "categories": [
+    "ai-ml",
+    "developer-tools"
+  ],
+  "tags": [
+    "tetrees",
+    "ai-packs",
+    "taip",
+    "agent-marketplace",
+    "stdio"
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tetrees/mcp@2.2.1"
+    ],
+    "env": {
+      "TETREES_API_URL": "https://ex.tetrees.ai/api",
+      "TETREES_TOKEN": "${input:TETREES_TOKEN}"
+    },
+    "metadata": {
+      "inputs": [
+        {
+          "id": "TETREES_TOKEN",
+          "label": "Tetrees account API token",
+          "description": "Revocable token from Tetrees Account settings. Hosted runs use Tetrees Points; optional BYOK keys stay in the local MCP environment.",
+          "type": "text",
+          "required": true,
+          "secret": true,
+          "placeholder": "tt_xxxxxxxx",
+          "obtain": {
+            "url": "https://ex.tetrees.ai/en",
+            "instructions": "1. Create a free account at https://ex.tetrees.ai/en\n2. Open Account settings\n3. Mint a revocable API token\n4. Paste the token here",
+            "button_label": "Create token"
+          }
+        }
+      ]
+    }
+  },
+  "auth": {
+    "type": "api_key",
+    "instructions": "Create a free Tetrees account and mint a revocable TETREES_TOKEN in Account settings."
+  },
+  "contributor": {
+    "name": "InsightVessel",
+    "github": "TetreesEX",
+    "url": "https://ex.tetrees.ai/en"
+  },
+  "links": {
+    "repository": "https://github.com/TetreesEX/TetreesAgent_EX",
+    "homepage": "https://ex.tetrees.ai/en",
+    "documentation": "https://ex.tetrees.ai/en/mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
