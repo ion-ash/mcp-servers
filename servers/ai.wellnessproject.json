@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/server-definition.schema.json",
+  "id": "ai.wellnessproject",
+  "name": "Wellness Project",
+  "alias": "wellness-project",
+  "description": "Connect health, fitness, nutrition, sleep, recovery, body metrics, goals, labs, and wearable data to AI assistants through Wellness Project's official hosted remote MCP server. Reads and writes your own logged and synced records, and renders interactive charts in clients that support MCP Apps UI. Authenticates via OAuth in your browser, no local setup or API key required.",
+  "logo": "https://wellnessproject.ai/images/brand/mcp-icon-512.png",
+  "schema_version": "2.1",
+  "categories": [
+    "productivity"
+  ],
+  "tags": [
+    "health",
+    "fitness",
+    "nutrition",
+    "sleep",
+    "recovery",
+    "wearables",
+    "quantified-self",
+    "remote"
+  ],
+  "transport": {
+    "type": "http",
+    "url": "https://wellnessproject.ai/api/mcp",
+    "metadata": {
+      "inputs": []
+    }
+  },
+  "auth": {
+    "type": "oauth",
+    "instructions": "Authenticates via OAuth 2.1 with Dynamic Client Registration in your browser using your Wellness Project account. No client ID, client secret, or API key setup needed."
+  },
+  "contributor": {
+    "name": "Wellness Project",
+    "github": "turnnoblindeye",
+    "url": "https://wellnessproject.ai"
+  },
+  "links": {
+    "homepage": "https://wellnessproject.ai",
+    "documentation": "https://github.com/turnnoblindeye/wellness-project-mcp"
+  },
+  "platforms": [
+    "all"
+  ],
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false,
+    "read_only_mode": false
+  }
+}
