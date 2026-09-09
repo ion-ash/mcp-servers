@@ -1,10 +1,10 @@
 {
     "$schema": "../schemas/server-definition.schema.json",
-    "id": "ai.vibeprospecting-mcp",
+    "id": "ai.vibeprospecting",
     "name": "Vibe Prospecting",
     "alias": "vibeprospecting",
-    "description": "Power your chat with live B2B data to create lead lists, research companies, enrich contacts, personalize outreach, and inspect business signals, technology stacks, events, and website changes.",
-    "logo": "https://avatars.githubusercontent.com/u/48208778?v=4",
+    "description": "B2B company and contact intelligence for prospecting workflows.",
+    "logo": "https://raw.githubusercontent.com/explorium-ai/vibeprospecting-plugin/main/assets/icon.png",
     "schema_version": "2.1",
     "categories": [
         "productivity"
