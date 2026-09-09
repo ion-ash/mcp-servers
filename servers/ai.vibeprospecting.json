@@ -1,0 +1,51 @@
+{
+    "$schema": "../schemas/server-definition.schema.json",
+    "id": "ai.vibeprospecting",
+    "name": "Vibe Prospecting",
+    "alias": "vibeprospecting",
+    "description": "Power your chat with live B2B data to create lead lists, research companies, enrich contacts, personalize outreach, and inspect business signals, technology stacks, events, and website changes.",
+    "logo": "https://raw.githubusercontent.com/explorium-ai/vibeprospecting-plugin/main/assets/icon.png",
+    "schema_version": "2.1",
+    "categories": [
+        "productivity"
+    ],
+    "tags": [
+        "prospecting",
+        "b2b",
+        "leads",
+        "contacts",
+        "sales",
+        "enrichment",
+        "companies"
+    ],
+    "transport": {
+        "type": "http",
+        "url": "https://vibeprospecting.explorium.ai/mcp",
+        "metadata": {
+            "inputs": []
+        }
+    },
+    "auth": {
+        "type": "oauth",
+        "instructions": "Authenticates via OAuth in your browser. No API keys or local setup required."
+    },
+    "contributor": {
+        "name": "Explorium",
+        "github": "explorium-ai",
+        "url": "https://vibeprospecting.ai"
+    },
+    "links": {
+        "repository": "https://github.com/explorium-ai/vibeprospecting-mcp",
+        "homepage": "https://vibeprospecting.ai",
+        "documentation": "https://github.com/explorium-ai/vibeprospecting-mcp"
+    },
+    "platforms": [
+        "all"
+    ],
+    "capabilities": {
+        "tools": true,
+        "resources": false,
+        "prompts": false,
+        "read_only_mode": false
+    }
+}
