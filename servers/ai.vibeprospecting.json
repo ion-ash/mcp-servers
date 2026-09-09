@@ -3,7 +3,7 @@
     "id": "ai.vibeprospecting",
     "name": "Vibe Prospecting",
     "alias": "vibeprospecting",
-    "description": "B2B company and contact intelligence for prospecting workflows.",
+    "description": "Power your chat with live B2B data to create lead lists, research companies, enrich contacts, personalize outreach, and inspect business signals, technology stacks, events, and website changes.",
     "logo": "https://raw.githubusercontent.com/explorium-ai/vibeprospecting-plugin/main/assets/icon.png",
     "schema_version": "2.1",
     "categories": [
